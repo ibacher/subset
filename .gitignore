@@ -1,0 +1,11 @@
+.env
+openapi.json
+**pycache**/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+dist/
+*.egg-info/
+.ruff_cache/
+.pytest_cache/

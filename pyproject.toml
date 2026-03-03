@@ -1,0 +1,36 @@
+[project]
+name = "superset-client"
+version = "0.1.0"
+description = "Client for connecting to Apache Superset REST API"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.9.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "ruff>=0.1.0",
+    "ty>=0.0.20",
+]
+viz = [
+    "plotly>=6.0.0",
+    "polars>=1.0.0",
+    "pyarrow>=10.0.0",
+    "numpy>=1.20.0",
+    "narwhals>=2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
